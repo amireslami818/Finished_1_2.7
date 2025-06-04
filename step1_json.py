@@ -10,22 +10,20 @@ IMPORTANT TERMINOLOGY:
 - IN-PLAY MATCHES = Only matches with status_id 2,3,4,5,6 (actively playing subset of live matches)
 """
 
-import asyncio
-import aiohttp
 import json
 import logging
 import logging.handlers
 import os
 import re
+import requests
 import shutil
 import signal
 import subprocess
 import sys
 import time
 import traceback
-import psutil
+import pytz
 from datetime import datetime
-from zoneinfo import ZoneInfo
 from collections import defaultdict
 from contextlib import contextmanager
 from dotenv import load_dotenv
@@ -61,50 +59,51 @@ URLS = {
 
 def get_ny_time_str(format_str="%m/%d/%Y %I:%M:%S %p EST"):
     """Get current time in New York timezone with custom format"""
-    return datetime.now(ZoneInfo("America/New_York")).strftime(format_str)
+    ny_tz = pytz.timezone("America/New_York")
+    return datetime.now(ny_tz).strftime(format_str)
 
 def extract_status_id(match):
     """Extract status_id from match data, checking multiple locations"""
     return match.get("status_id") or (match.get("score", [None, None])[1] if isinstance(match.get("score"), list) and len(match.get("score", [])) > 1 else None)
 
-async def fetch_json(session: aiohttp.ClientSession, url: str, params: dict) -> dict:
+def fetch_json(url: str, params: dict) -> dict:
     """Fetch JSON data with retry logic"""
     for attempt in range(3):
         try:
-            async with session.get(url, params=params) as response:
-                response.raise_for_status()
-                return await response.json()
+            response = requests.get(url, params=params, timeout=30)
+            response.raise_for_status()
+            return response.json()
         except Exception as e:
             if attempt == 2:  # Last attempt
                 logger.warning(f"API call failed for {url} after 3 attempts: {str(e)}")
                 return {}
-            await asyncio.sleep(2 ** attempt)  # Exponential backoff
+            time.sleep(2 ** attempt)  # Exponential backoff
     return {}
 
-async def fetch_live_matches(session):
-    return await fetch_json(session, URLS["live"], {"user": USER, "secret": SECRET})
+def fetch_live_matches():
+    return fetch_json(URLS["live"], {"user": USER, "secret": SECRET})
 
-async def fetch_match_details(session, match_id):
-    return await fetch_json(session, URLS["details"], {"user": USER, "secret": SECRET, "uuid": match_id})
+def fetch_match_details(match_id):
+    return fetch_json(URLS["details"], {"user": USER, "secret": SECRET, "uuid": match_id})
 
-async def fetch_match_odds(session, match_id):
-    return await fetch_json(session, URLS["odds"], {"user": USER, "secret": SECRET, "uuid": match_id})
+def fetch_match_odds(match_id):
+    return fetch_json(URLS["odds"], {"user": USER, "secret": SECRET, "uuid": match_id})
 
-async def fetch_team_info(session, team_id):
-    return await fetch_json(session, URLS["team"], {"user": USER, "secret": SECRET, "uuid": team_id})
+def fetch_team_info(team_id):
+    return fetch_json(URLS["team"], {"user": USER, "secret": SECRET, "uuid": team_id})
 
-async def fetch_competition_info(session, comp_id):
-    return await fetch_json(session, URLS["competition"], {"user": USER, "secret": SECRET, "uuid": comp_id})
+def fetch_competition_info(comp_id):
+    return fetch_json(URLS["competition"], {"user": USER, "secret": SECRET, "uuid": comp_id})
 
-async def fetch_country_list(session):
-    return await fetch_json(session, URLS["country"], {"user": USER, "secret": SECRET})
+def fetch_country_list():
+    return fetch_json(URLS["country"], {"user": USER, "secret": SECRET})
 
-async def fetch_live_data(session):
+def fetch_live_data():
     """Fetch live matches data"""
     logger.info("Fetching live matches from TheSports API...")
     api_start = datetime.now()
     
-    live = await fetch_live_matches(session)
+    live = fetch_live_matches()
     api_end = datetime.now()
     api_duration = (api_end - api_start).total_seconds()
     
@@ -145,7 +144,7 @@ async def fetch_live_data(session):
     
     return live
 
-async def enrich_match_data(session, live_data, matches):
+def enrich_match_data(live_data, matches):
     """Enrich matches with detailed data (details, odds, teams, competitions)"""
     logger.info(f"Starting detailed data fetch for {len(matches)} matches...")
     detail_start = datetime.now()
@@ -161,12 +160,12 @@ async def enrich_match_data(session, live_data, matches):
         mid = match.get("id")
 
         # Add small delay to avoid rate limiting
-        await asyncio.sleep(0.1)
+        time.sleep(0.1)
         
-        detail_wrap = await fetch_match_details(session, mid)
+        detail_wrap = fetch_match_details(mid)
         all_data["match_details"][mid] = detail_wrap
 
-        all_data["match_odds"][mid] = await fetch_match_odds(session, mid)
+        all_data["match_odds"][mid] = fetch_match_odds(mid)
 
         detail = {}
         if isinstance(detail_wrap, dict):
@@ -183,14 +182,14 @@ async def enrich_match_data(session, live_data, matches):
             match["status_id"] = detail.get("status_id")
 
         if home_id and str(home_id) not in all_data["team_info"]:
-            all_data["team_info"][str(home_id)] = await fetch_team_info(session, home_id)
+            all_data["team_info"][str(home_id)] = fetch_team_info(home_id)
         if away_id and str(away_id) not in all_data["team_info"]:
-            all_data["team_info"][str(away_id)] = await fetch_team_info(session, away_id)
+            all_data["team_info"][str(away_id)] = fetch_team_info(away_id)
         if comp_id and str(comp_id) not in all_data["competition_info"]:
-            all_data["competition_info"][str(comp_id)] = await fetch_competition_info(session, comp_id)
+            all_data["competition_info"][str(comp_id)] = fetch_competition_info(comp_id)
 
     # Get countries data
-    all_data["countries"] = await fetch_country_list(session)
+    all_data["countries"] = fetch_country_list()
     
     # Log completion summary
     detail_end = datetime.now()
@@ -204,7 +203,7 @@ async def enrich_match_data(session, live_data, matches):
     
     return all_data
 
-async def step1_main():
+def step1_main():
     """Fetch data once and return the data dict."""
     # Header with New York timestamp
     ny_time = get_ny_time_str()
@@ -214,38 +213,37 @@ async def step1_main():
     
     start_time = datetime.now()
     
-    async with aiohttp.ClientSession() as session:
-        # Fetch live matches
-        live_data = await fetch_live_data(session)
-        matches = live_data.get("results", [])
-        
-        # Enrich with detailed data
-        enriched_data = await enrich_match_data(session, live_data, matches)
-        
-        # Combine all data
-        all_data = {
-            "timestamp": start_time.isoformat(),
-            "live_matches": live_data,
-            **enriched_data
-        }
-        
-        # Footer with completion info
-        end_time = datetime.now()
-        total_duration = (end_time - start_time).total_seconds()
-        
-        # Calculate In-Play match count for footer summary
-        in_play_count = 0
-        matches = live_data.get("results", [])
-        for match in matches:
-            status_id = extract_status_id(match)
-            if status_id in [2, 3, 4, 5, 6, 7]:  # In-Play status IDs
-                in_play_count += 1
-        
-        logger.info("="*80)
-        logger.info(f"STEP 1 - FETCH COMPLETED SUCCESSFULLY - {ny_time}")
-        logger.info(f"Total execution time: {total_duration:.2f} seconds")
-        logger.info(f"In-Play matches: {in_play_count} (status IDs 2-7)")
-        logger.info("="*80)
+    # Fetch live matches
+    live_data = fetch_live_data()
+    matches = live_data.get("results", [])
+    
+    # Enrich with detailed data
+    enriched_data = enrich_match_data(live_data, matches)
+    
+    # Combine all data
+    all_data = {
+        "timestamp": start_time.isoformat(),
+        "live_matches": live_data,
+        **enriched_data
+    }
+    
+    # Footer with completion info
+    end_time = datetime.now()
+    total_duration = (end_time - start_time).total_seconds()
+    
+    # Calculate In-Play match count for footer summary
+    in_play_count = 0
+    matches = live_data.get("results", [])
+    for match in matches:
+        status_id = extract_status_id(match)
+        if status_id in [2, 3, 4, 5, 6, 7]:  # In-Play status IDs
+            in_play_count += 1
+    
+    logger.info("="*80)
+    logger.info(f"STEP 1 - FETCH COMPLETED SUCCESSFULLY - {ny_time}")
+    logger.info(f"Total execution time: {total_duration:.2f} seconds")
+    logger.info(f"In-Play matches: {in_play_count} (status IDs 2-7)")
+    logger.info("="*80)
 
     return all_data
 
@@ -559,12 +557,86 @@ def print_comprehensive_match_breakdown(comprehensive_match_breakdown):
     print(f"IN-PLAY MATCHES TOTAL: {total_in_play}")
     print("="*100)
 
-async def run_forever():
-    """Run the data fetcher in a continuous loop"""
-    while True:
-        start = time.time()
-        try:
-            result = await step1_main()
+if __name__ == "__main__":
+    import argparse
+    
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Step 1 JSON Data Fetcher')
+    parser.add_argument('--continuous', action='store_true', 
+                       help='Run continuously in 60-second cycles (for production use)')
+    args = parser.parse_args()
+
+    try:
+        if args.continuous:
+            # Continuous mode - run every 60 seconds
+            logger.info("Starting continuous mode (60-second cycles)...")
+            while True:
+                start_time = time.time()
+                
+                try:
+                    result = step1_main()
+                    
+                    # Get match count for the console output
+                    match_count = len(result.get('live_matches', {}).get('results', []))
+                    print(f"Step 1: Fetched data with {match_count} matches")
+                    
+                    # Generate unified status summary (replaces multiple old functions)
+                    unified_summary = create_unified_status_summary(result.get("live_matches", {}))
+                    
+                    # Create detailed status mapping
+                    detailed_status_mapping = create_detailed_status_mapping(result.get("live_matches", {}))
+                    
+                    # Create comprehensive match breakdown with actual match details
+                    comprehensive_match_breakdown = create_comprehensive_match_breakdown(result)
+                    
+                    # Add New York Eastern time timestamp to data
+                    result["ny_timestamp"] = get_ny_time_str()
+                    
+                    # Add all status summaries to JSON
+                    result["unified_status_summary"] = unified_summary
+                    result["detailed_status_mapping"] = detailed_status_mapping
+                    result["comprehensive_match_breakdown"] = comprehensive_match_breakdown
+                    
+                    # Always save to standard pipeline filename for compatibility (overwrites each time)
+                    save_to_json(result, 'step1.json')
+                    
+                    # Daily rotation: Save with date-only filename at midnight NY time
+                    ny_tz = pytz.timezone("America/New_York")
+                    ny_now = datetime.now(ny_tz)
+                    daily_filename = f'step1_{ny_now.strftime("%Y-%m-%d")}.json'
+                    
+                    # Only save daily file if it doesn't exist (once per day)
+                    if not os.path.exists(daily_filename):
+                        save_to_json(result, daily_filename)
+                        logger.info(f"Daily rotation: Created {daily_filename}")
+                    
+                    # Print completion time in New York time
+                    print(f"Data saved at {get_ny_time_str()} (New York Time)")
+                    
+                    # Print comprehensive summary with formatted breakdown
+                    print("\n" + "="*80)
+                    print("                    COMPREHENSIVE STATUS BREAKDOWN                    ")
+                    print("="*80)
+                    for line in unified_summary["formatted_summary"]:
+                        print(line)
+                    print(f"Total Matches Fetched: {unified_summary['total_matches_fetched']}")
+                    print("="*80)
+                    
+                    # Print comprehensive match breakdown with actual match details (only once)
+                    print_comprehensive_match_breakdown(comprehensive_match_breakdown)
+                    
+                except Exception as e:
+                    logger.error(f"Error in cycle: {e}")
+                    traceback.print_exc()
+                
+                # Sleep for remainder of 60 seconds
+                duration = time.time() - start_time
+                sleep_time = max(0, 60 - duration)
+                logger.info(f"Cycle completed in {duration:.2f}s, sleeping for {sleep_time:.2f}s")
+                time.sleep(sleep_time)
+        else:
+            # Single run mode - default behavior
+            result = step1_main()
             
             # Get match count for the console output
             match_count = len(result.get('live_matches', {}).get('results', []))
@@ -587,15 +659,21 @@ async def run_forever():
             result["detailed_status_mapping"] = detailed_status_mapping
             result["comprehensive_match_breakdown"] = comprehensive_match_breakdown
             
-            # Save with timestamped filename for 24/7 operation
-            timestamp = get_ny_time_str("%Y-%m-%d_%H-%M-%S")
-            save_to_json(result, f'step1_{timestamp}.json')
-            
-            # Also save to standard pipeline filename for compatibility
+            # Always save to standard pipeline filename for compatibility (overwrites each time)
             save_to_json(result, 'step1.json')
             
+            # Daily rotation: Save with date-only filename at midnight NY time
+            ny_tz = pytz.timezone("America/New_York")
+            ny_now = datetime.now(ny_tz)
+            daily_filename = f'step1_{ny_now.strftime("%Y-%m-%d")}.json'
+            
+            # Only save daily file if it doesn't exist (once per day)
+            if not os.path.exists(daily_filename):
+                save_to_json(result, daily_filename)
+                logger.info(f"Daily rotation: Created {daily_filename}")
+            
             # Print completion time in New York time
-            print(f"Data saved at {get_ny_time()} (New York Time)")
+            print(f"Data saved at {get_ny_time_str()} (New York Time)")
             
             # Print comprehensive summary with formatted breakdown
             print("\n" + "="*80)
@@ -608,19 +686,9 @@ async def run_forever():
             
             # Print comprehensive match breakdown with actual match details (only once)
             print_comprehensive_match_breakdown(comprehensive_match_breakdown)
-            
-        except Exception as e:
-            logger.error(f"Error in cycle: {e}")
-            traceback.print_exc()
-            
-        # Sleep for remainder of 60 seconds, minimum 0
-        duration = time.time() - start
-        sleep_time = max(0, 60 - duration)
-        logger.info(f"Cycle completed in {duration:.2f}s, sleeping for {sleep_time:.2f}s")
-        await asyncio.sleep(sleep_time)
-
-if __name__ == "__main__":
-    try:
-        asyncio.run(run_forever())
+        
     except KeyboardInterrupt:
         logger.info("Interrupted manually.")
+    except Exception as e:
+        logger.error(f"Error in execution: {e}")
+        traceback.print_exc()

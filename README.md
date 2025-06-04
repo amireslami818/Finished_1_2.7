@@ -14,7 +14,7 @@ A robust, 24/7 sports data fetching system that retrieves live match data from T
 ## Project Structure
 
 ```
-├── json_fetch.py          # Main data fetcher (Step 1)
+├── step1_json.py          # Main data fetcher (Step 1)
 ├── step2.7.py            # Data processor (Step 2.7)
 ├── start.sh              # Service management script
 ├── .env.template         # Environment variables template
@@ -70,7 +70,7 @@ A robust, 24/7 sports data fetching system that retrieves live match data from T
 
 ## Data Flow
 
-1. **Step 1 (json_fetch.py)**:
+1. **Step 1 (step1_json.py)**:
    - Fetches live matches from TheSports API
    - Enriches data with match details, odds, teams, and competitions
    - Logs comprehensive status summaries including In-Play match counts

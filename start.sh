@@ -2,8 +2,8 @@
 
 # Configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PYTHON_SCRIPT="$SCRIPT_DIR/json_fetch.py"
-PID_FILE="$SCRIPT_DIR/json_fetch.pid"
+PYTHON_SCRIPT="$SCRIPT_DIR/step1_json.py"
+PID_FILE="$SCRIPT_DIR/step1_json.pid"
 LOG_FILE="$SCRIPT_DIR/start.log"
 VENV_DIR="$SCRIPT_DIR/venv"
 PYTHON_BIN="$VENV_DIR/bin/python"
@@ -112,7 +112,7 @@ start_fetcher() {
     
     # Start the Python script in background using virtual environment
     cd "$SCRIPT_DIR"
-    nohup "$PYTHON_BIN" "$PYTHON_SCRIPT" >> "$LOG_FILE" 2>&1 &
+    nohup "$PYTHON_BIN" "$PYTHON_SCRIPT" --continuous >> "$LOG_FILE" 2>&1 &
     PID=$!
     
     # Save PID to file
