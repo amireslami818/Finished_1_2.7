@@ -1,0 +1,962 @@
+================================================================================
+STEP 1 - DATA FETCH STARTED - 06/03/2025 07:55:21 PM EST
+================================================================================
+Fetching live matches from TheSports API...
+✓ Live matches API call successful
+  Response time: 0.25 seconds
+  Total matches returned: 22
+  API response code: 0
+  Matches with status info: 22/22
+  Raw API status breakdown:
+    First half (ID: 2): 3 matches
+    Half-time (ID: 3): 6 matches
+    Second half (ID: 4): 4 matches
+    End (ID: 8): 6 matches
+    Delay (ID: 9): 1 matches
+    To be determined (ID: 13): 2 matches
+Starting detailed data fetch for 22 matches...
+Detailed data fetch time: 30.13 seconds
+Unique teams fetched: 43
+Unique competitions fetched: 13
+Match details fetched: 22
+Match odds fetched: 22
+================================================================================
+STEP 1 - FETCH COMPLETED SUCCESSFULLY - 06/03/2025 07:55:21 PM EST
+Total execution time: 30.38 seconds
+In-Play matches: 13 (status IDs 2-7)
+================================================================================
+Cycle completed in 31.29s, sleeping for 28.71s
+================================================================================
+STEP 1 - DATA FETCH STARTED - 06/03/2025 07:56:22 PM EST
+================================================================================
+Fetching live matches from TheSports API...
+✓ Live matches API call successful
+  Response time: 0.24 seconds
+  Total matches returned: 22
+  API response code: 0
+  Matches with status info: 22/22
+  Raw API status breakdown:
+    First half (ID: 2): 2 matches
+    Half-time (ID: 3): 7 matches
+    Second half (ID: 4): 4 matches
+    End (ID: 8): 6 matches
+    Delay (ID: 9): 1 matches
+    To be determined (ID: 13): 2 matches
+Starting detailed data fetch for 22 matches...
+Detailed data fetch time: 30.25 seconds
+Unique teams fetched: 43
+Unique competitions fetched: 13
+Match details fetched: 22
+Match odds fetched: 22
+================================================================================
+STEP 1 - FETCH COMPLETED SUCCESSFULLY - 06/03/2025 07:56:22 PM EST
+Total execution time: 30.50 seconds
+In-Play matches: 13 (status IDs 2-7)
+================================================================================
+Cycle completed in 31.50s, sleeping for 28.50s
+================================================================================
+STEP 1 - DATA FETCH STARTED - 06/03/2025 07:57:22 PM EST
+================================================================================
+Fetching live matches from TheSports API...
+✓ Live matches API call successful
+  Response time: 0.33 seconds
+  Total matches returned: 22
+  API response code: 0
+  Matches with status info: 22/22
+  Raw API status breakdown:
+    First half (ID: 2): 2 matches
+    Half-time (ID: 3): 7 matches
+    Second half (ID: 4): 3 matches
+    End (ID: 8): 7 matches
+    Delay (ID: 9): 1 matches
+    To be determined (ID: 13): 2 matches
+Starting detailed data fetch for 22 matches...
+Detailed data fetch time: 28.35 seconds
+Unique teams fetched: 43
+Unique competitions fetched: 13
+Match details fetched: 22
+Match odds fetched: 22
+================================================================================
+STEP 1 - FETCH COMPLETED SUCCESSFULLY - 06/03/2025 07:57:22 PM EST
+Total execution time: 28.68 seconds
+In-Play matches: 11 (status IDs 2-7)
+================================================================================
+Step 1: Fetched data with 22 matches
+Data saved to step1_2025-06-03_19-55-52.json
+Data saved to step1.json
+Data saved at 06/03/2025 07:55:53 PM (New York Time)
+
+================================================================================
+                    COMPREHENSIVE STATUS BREAKDOWN                    
+================================================================================
+First half (ID: 2): 3
+Half-time (ID: 3): 6
+Second half (ID: 4): 4
+End (ID: 8): 6
+Delay (ID: 9): 1
+To be determined (ID: 13): 2
+IN-PLAY MATCHES: 13
+Total Matches Fetched: 22
+================================================================================
+
+====================================================================================================
+                    COMPREHENSIVE MATCH BREAKDOWN - ACTUAL MATCH DETAILS                    
+====================================================================================================
+
+DELAY (ID: 9) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Colorado ISA vs Flatirons Rush (0-0) - USL League Two
+
+END (ID: 8) - 6 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Concordia U20 vs Chapecoense (Youth) (0-3) - Brazilian Youth Championship
+  2. 9 de Octubre vs Club Leones del Norte (1-0) - Ecuadorian Campeonato Serie B
+  3. Costa Rica (w) U20 vs USA (w) U20 (0-4) - CONCACAF U20 Women's Championship
+  4. Costa Rica (w) U20 vs Guyana (w) U20 (9-0) - CONCACAF U20 Women's Championship
+  5. FC Struga vs FC Vardar Skopje (0-2) - North Macedonia Cup
+  ... and 1 more matches
+
+FIRST HALF (ID: 2) - 3 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Canada Women vs Haiti Women (1-0) - International Friendly
+  2. Chattanooga Red Wolves (w) vs Birmingham Legion FC (W) (0-0) - USL WLW
+  3. Lansing City vs Union FC Macomb (1-2) - USL League Two
+
+HALF-TIME (ID: 3) - 6 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Vasco da Gama (Youth) vs Rio Branco AC (Youth) (1-0) - Brazilian Youth Championship
+  2. Cincinnati II vs Philadelphia Union II (0-2) - MLS Next PL
+  3. NONA FC vs Brevard SC (1-0) - USL League Two
+  4. Akron City FC vs Toledo Villa FC (1-0) - USL League Two
+  5. Boston Bolts vs West Mass Pioneers (0-2) - USL League Two
+  ... and 1 more matches
+
+SECOND HALF (ID: 4) - 4 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Rampla Juniors FC vs Oriental (0-0) - Uruguay Segunda League
+  2. Philadelphia Union DS vs West Chester Predators (6-1) - USL Jägermeister Cup
+  3. 15 de Mayo Ypoa vs Torres Cue FC (1-3) - Paraguayan Cup
+  4. Tacuarembo vs CS Cerrito (1-0) - Uruguay Segunda League
+
+TO BE DETERMINED (ID: 13) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Southern Soccer Academy (w) vs Asheville City SC (w) (0-0) - USL WLW
+  2. CS Patria vs CD Miguel Iturralde (0-0) - Ecuadorian  Cup
+
+====================================================================================================
+IN-PLAY MATCHES TOTAL: 13
+====================================================================================================
+Step 1: Fetched data with 22 matches
+Data saved to step1_2025-06-03_19-56-52.json
+Data saved to step1.json
+Data saved at 06/03/2025 07:56:53 PM (New York Time)
+
+================================================================================
+                    COMPREHENSIVE STATUS BREAKDOWN                    
+================================================================================
+First half (ID: 2): 2
+Half-time (ID: 3): 7
+Second half (ID: 4): 4
+End (ID: 8): 6
+Delay (ID: 9): 1
+To be determined (ID: 13): 2
+IN-PLAY MATCHES: 13
+Total Matches Fetched: 22
+================================================================================
+
+====================================================================================================
+                    COMPREHENSIVE MATCH BREAKDOWN - ACTUAL MATCH DETAILS                    
+====================================================================================================
+
+DELAY (ID: 9) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Colorado ISA vs Flatirons Rush (0-0) - USL League Two
+
+END (ID: 8) - 6 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Concordia U20 vs Chapecoense (Youth) (0-3) - Brazilian Youth Championship
+  2. 9 de Octubre vs Club Leones del Norte (1-0) - Ecuadorian Campeonato Serie B
+  3. Costa Rica (w) U20 vs USA (w) U20 (0-4) - CONCACAF U20 Women's Championship
+  4. Costa Rica (w) U20 vs Guyana (w) U20 (9-0) - CONCACAF U20 Women's Championship
+  5. FC Struga vs FC Vardar Skopje (0-2) - North Macedonia Cup
+  ... and 1 more matches
+
+FIRST HALF (ID: 2) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Canada Women vs Haiti Women (1-0) - International Friendly
+  2. Chattanooga Red Wolves (w) vs Birmingham Legion FC (W) (0-0) - USL WLW
+
+HALF-TIME (ID: 3) - 7 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Lansing City vs Union FC Macomb (1-2) - USL League Two
+  2. Vasco da Gama (Youth) vs Rio Branco AC (Youth) (1-0) - Brazilian Youth Championship
+  3. Cincinnati II vs Philadelphia Union II (0-2) - MLS Next PL
+  4. NONA FC vs Brevard SC (1-0) - USL League Two
+  5. Akron City FC vs Toledo Villa FC (1-0) - USL League Two
+  ... and 2 more matches
+
+SECOND HALF (ID: 4) - 4 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Rampla Juniors FC vs Oriental (0-0) - Uruguay Segunda League
+  2. Philadelphia Union DS vs West Chester Predators (6-1) - USL Jägermeister Cup
+  3. 15 de Mayo Ypoa vs Torres Cue FC (1-3) - Paraguayan Cup
+  4. Tacuarembo vs CS Cerrito (1-0) - Uruguay Segunda League
+
+TO BE DETERMINED (ID: 13) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Southern Soccer Academy (w) vs Asheville City SC (w) (0-0) - USL WLW
+  2. CS Patria vs CD Miguel Iturralde (0-0) - Ecuadorian  Cup
+
+====================================================================================================
+IN-PLAY MATCHES TOTAL: 13
+====================================================================================================
+Step 1: Fetched data with 22 matches
+Data saved to step1_2025-06-03_19-57-50.json
+Data saved to step1.json
+Data saved at 06/03/2025 07:57:51 PM (New York Time)
+
+================================================================================
+                    COMPREHENSIVE STATUS BREAKDOWN                    
+================================================================================
+First half (ID: 2): 2
+Half-time (ID: 3): 7
+Second half (ID: 4): 2
+End (ID: 8): 8
+Delay (ID: 9): 1
+To be determined (ID: 13): 2
+IN-PLAY MATCHES: 11
+Total Matches Fetched: 22
+================================================================================
+
+====================================================================================================
+                    COMPREHENSIVE MATCH BREAKDOWN - ACTUAL MATCH DETAILS                    
+====================================================================================================
+
+DELAY (ID: 9) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Colorado ISA vs Flatirons Rush (0-0) - USL League Two
+
+END (ID: 8) - 8 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. 15 de Mayo Ypoa vs Torres Cue FC (1-3) - Paraguayan Cup
+  2. Tacuarembo vs CS Cerrito (2-0) - Uruguay Segunda League
+Cycle completed in 29.57s, sleeping for 30.43s
+================================================================================
+STEP 1 - DATA FETCH STARTED - 06/03/2025 07:58:22 PM EST
+================================================================================
+Fetching live matches from TheSports API...
+✓ Live matches API call successful
+  Response time: 0.29 seconds
+  Total matches returned: 22
+  API response code: 0
+  Matches with status info: 22/22
+  Raw API status breakdown:
+    First half (ID: 2): 2 matches
+    Half-time (ID: 3): 7 matches
+    Second half (ID: 4): 2 matches
+    End (ID: 8): 8 matches
+    Delay (ID: 9): 1 matches
+    To be determined (ID: 13): 2 matches
+Starting detailed data fetch for 22 matches...
+Detailed data fetch time: 33.10 seconds
+Unique teams fetched: 43
+Unique competitions fetched: 13
+Match details fetched: 22
+Match odds fetched: 22
+================================================================================
+STEP 1 - FETCH COMPLETED SUCCESSFULLY - 06/03/2025 07:58:22 PM EST
+Total execution time: 33.39 seconds
+In-Play matches: 11 (status IDs 2-7)
+================================================================================
+Cycle completed in 34.26s, sleeping for 25.74s
+================================================================================
+STEP 1 - DATA FETCH STARTED - 06/03/2025 07:59:22 PM EST
+================================================================================
+Fetching live matches from TheSports API...
+✓ Live matches API call successful
+  Response time: 0.34 seconds
+  Total matches returned: 23
+  API response code: 0
+  Matches with status info: 23/23
+  Raw API status breakdown:
+    First half (ID: 2): 3 matches
+    Half-time (ID: 3): 7 matches
+    Second half (ID: 4): 2 matches
+    End (ID: 8): 8 matches
+    Delay (ID: 9): 1 matches
+    To be determined (ID: 13): 2 matches
+Starting detailed data fetch for 23 matches...
+Detailed data fetch time: 30.71 seconds
+Unique teams fetched: 45
+Unique competitions fetched: 13
+Match details fetched: 23
+Match odds fetched: 23
+================================================================================
+STEP 1 - FETCH COMPLETED SUCCESSFULLY - 06/03/2025 07:59:22 PM EST
+Total execution time: 31.04 seconds
+In-Play matches: 12 (status IDs 2-7)
+================================================================================
+  3. Concordia U20 vs Chapecoense (Youth) (0-3) - Brazilian Youth Championship
+  4. 9 de Octubre vs Club Leones del Norte (1-0) - Ecuadorian Campeonato Serie B
+  5. Costa Rica (w) U20 vs USA (w) U20 (0-4) - CONCACAF U20 Women's Championship
+  ... and 3 more matches
+
+FIRST HALF (ID: 2) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Canada Women vs Haiti Women (1-0) - International Friendly
+  2. Chattanooga Red Wolves (w) vs Birmingham Legion FC (W) (0-0) - USL WLW
+
+HALF-TIME (ID: 3) - 7 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Lansing City vs Union FC Macomb (1-2) - USL League Two
+  2. Vasco da Gama (Youth) vs Rio Branco AC (Youth) (1-0) - Brazilian Youth Championship
+  3. Cincinnati II vs Philadelphia Union II (0-2) - MLS Next PL
+  4. NONA FC vs Brevard SC (1-0) - USL League Two
+  5. Akron City FC vs Toledo Villa FC (1-0) - USL League Two
+  ... and 2 more matches
+
+SECOND HALF (ID: 4) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Rampla Juniors FC vs Oriental (0-0) - Uruguay Segunda League
+  2. Philadelphia Union DS vs West Chester Predators (6-1) - USL Jägermeister Cup
+
+TO BE DETERMINED (ID: 13) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Southern Soccer Academy (w) vs Asheville City SC (w) (0-0) - USL WLW
+  2. CS Patria vs CD Miguel Iturralde (0-0) - Ecuadorian  Cup
+
+====================================================================================================
+IN-PLAY MATCHES TOTAL: 11
+====================================================================================================
+Step 1: Fetched data with 22 matches
+Data saved to step1_2025-06-03_19-58-55.json
+Data saved to step1.json
+Data saved at 06/03/2025 07:58:56 PM (New York Time)
+
+================================================================================
+                    COMPREHENSIVE STATUS BREAKDOWN                    
+================================================================================
+First half (ID: 2): 2
+Half-time (ID: 3): 7
+Second half (ID: 4): 2
+End (ID: 8): 8
+Delay (ID: 9): 1
+To be determined (ID: 13): 2
+IN-PLAY MATCHES: 11
+Total Matches Fetched: 22
+================================================================================
+
+====================================================================================================
+                    COMPREHENSIVE MATCH BREAKDOWN - ACTUAL MATCH DETAILS                    
+====================================================================================================
+
+DELAY (ID: 9) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Colorado ISA vs Flatirons Rush (0-0) - USL League Two
+
+END (ID: 8) - 8 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. 15 de Mayo Ypoa vs Torres Cue FC (1-3) - Paraguayan Cup
+  2. Tacuarembo vs CS Cerrito (2-0) - Uruguay Segunda League
+  3. Concordia U20 vs Chapecoense (Youth) (0-3) - Brazilian Youth Championship
+  4. 9 de Octubre vs Club Leones del Norte (1-0) - Ecuadorian Campeonato Serie B
+  5. Costa Rica (w) U20 vs USA (w) U20 (0-4) - CONCACAF U20 Women's Championship
+  ... and 3 more matches
+
+FIRST HALF (ID: 2) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Canada Women vs Haiti Women (1-0) - International Friendly
+  2. Chattanooga Red Wolves (w) vs Birmingham Legion FC (W) (0-0) - USL WLW
+
+HALF-TIME (ID: 3) - 7 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Lansing City vs Union FC Macomb (1-2) - USL League Two
+  2. Vasco da Gama (Youth) vs Rio Branco AC (Youth) (1-0) - Brazilian Youth Championship
+  3. Cincinnati II vs Philadelphia Union II (0-2) - MLS Next PL
+  4. NONA FC vs Brevard SC (1-0) - USL League Two
+  5. Akron City FC vs Toledo Villa FC (1-0) - USL League Two
+  ... and 2 more matches
+
+SECOND HALF (ID: 4) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Rampla Juniors FC vs Oriental (0-0) - Uruguay Segunda League
+  2. Philadelphia Union DS vs West Chester Predators (6-1) - USL Jägermeister Cup
+
+TO BE DETERMINED (ID: 13) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Southern Soccer Academy (w) vs Asheville City SC (w) (0-0) - USL WLW
+  2. CS Patria vs CD Miguel Iturralde (0-0) - Ecuadorian  Cup
+
+====================================================================================================
+IN-PLAY MATCHES TOTAL: 11
+====================================================================================================
+Step 1: Fetched data with 23 matches
+Data saved to step1_2025-06-03_19-59-53.json
+Data saved to step1.json
+Data saved at 06/03/2025 07:59:53 PM (New York Time)
+
+================================================================================
+                    COMPREHENSIVE STATUS BREAKDOWN                    
+================================================================================
+First half (ID: 2): 3
+Half-time (ID: 3): 7
+Second half (ID: 4): 2
+End (ID: 8): 8
+Delay (ID: 9): 1
+To be determined (ID: 13): 2
+IN-PLAY MATCHES: 12
+Total Matches Fetched: 23
+================================================================================
+
+====================================================================================================
+                    COMPREHENSIVE MATCH BREAKDOWN - ACTUAL MATCH DETAILS                    
+====================================================================================================
+
+DELAY (ID: 9) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Colorado ISA vs Flatirons Rush (0-0) - USL League Two
+
+END (ID: 8) - 8 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. 15 de Mayo Ypoa vs Torres Cue FC (1-3) - Paraguayan Cup
+  2. Tacuarembo vs CS Cerrito (2-0) - Uruguay Segunda League
+  3. Concordia U20 vs Chapecoense (Youth) (0-3) - Brazilian Youth Championship
+  4. 9 de Octubre vs Club Leones del Norte (1-0) - Ecuadorian Campeonato Serie B
+  5. Costa Rica (w) U20 vs USA (w) U20 (0-4) - CONCACAF U20 Women's Championship
+  ... and 3 more matches
+
+FIRST HALF (ID: 2) - 3 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Virginia Dream vs Grove Soccer United (0-0) - USL Jägermeister Cup
+  2. Canada Women vs Haiti Women (2-0) - International Friendly
+  3. Chattanooga Red Wolves (w) vs Birmingham Legion FC (W) (0-0) - USL WLW
+
+HALF-TIME (ID: 3) - 7 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Lansing City vs Union FC Macomb (1-2) - USL League Two
+  2. Vasco da Gama (Youth) vs Rio Branco AC (Youth) (1-0) - Brazilian Youth Championship
+  3. Cincinnati II vs Philadelphia Union II (0-2) - MLS Next PL
+  4. NONA FC vs Brevard SC (1-0) - USL League Two
+  5. Akron City FC vs Toledo Villa FC (1-0) - USL League Two
+  ... and 2 more matches
+
+SECOND HALF (ID: 4) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Rampla Juniors FC vs Oriental (0-0) - Uruguay Segunda League
+  2. Philadelphia Union DS vs West Chester Predators (6-1) - USL Jägermeister Cup
+
+TO BE DETERMINED (ID: 13) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Southern Soccer Academy (w) vs Asheville City SC (w) (0-0) - USL WLW
+  2. CS Patria vs CD Miguel Iturralde (0-0) - Ecuadorian  Cup
+
+====================================================================================================
+IN-PLAY MATCHES TOTAL: 12
+Cycle completed in 31.89s, sleeping for 28.11s
+================================================================================
+STEP 1 - DATA FETCH STARTED - 06/03/2025 08:00:22 PM EST
+================================================================================
+Fetching live matches from TheSports API...
+✓ Live matches API call successful
+  Response time: 0.33 seconds
+  Total matches returned: 23
+  API response code: 0
+  Matches with status info: 23/23
+  Raw API status breakdown:
+    First half (ID: 2): 5 matches
+    Half-time (ID: 3): 7 matches
+    Second half (ID: 4): 2 matches
+    End (ID: 8): 7 matches
+    Cancel (ID: 12): 1 matches
+    To be determined (ID: 13): 1 matches
+Starting detailed data fetch for 23 matches...
+Detailed data fetch time: 34.16 seconds
+Unique teams fetched: 45
+Unique competitions fetched: 13
+Match details fetched: 23
+Match odds fetched: 23
+================================================================================
+STEP 1 - FETCH COMPLETED SUCCESSFULLY - 06/03/2025 08:00:22 PM EST
+Total execution time: 34.49 seconds
+In-Play matches: 14 (status IDs 2-7)
+================================================================================
+Cycle completed in 35.28s, sleeping for 24.72s
+================================================================================
+STEP 1 - DATA FETCH STARTED - 06/03/2025 08:01:22 PM EST
+================================================================================
+Fetching live matches from TheSports API...
+✓ Live matches API call successful
+  Response time: 0.28 seconds
+  Total matches returned: 24
+  API response code: 0
+  Matches with status info: 24/24
+  Raw API status breakdown:
+    First half (ID: 2): 6 matches
+    Half-time (ID: 3): 7 matches
+    Second half (ID: 4): 2 matches
+    End (ID: 8): 7 matches
+    Cancel (ID: 12): 1 matches
+    To be determined (ID: 13): 1 matches
+Starting detailed data fetch for 24 matches...
+Detailed data fetch time: 31.33 seconds
+Unique teams fetched: 47
+Unique competitions fetched: 13
+Match details fetched: 24
+Match odds fetched: 24
+================================================================================
+STEP 1 - FETCH COMPLETED SUCCESSFULLY - 06/03/2025 08:01:22 PM EST
+Total execution time: 31.61 seconds
+In-Play matches: 15 (status IDs 2-7)
+================================================================================
+Cycle completed in 32.45s, sleeping for 27.55s
+================================================================================
+STEP 1 - DATA FETCH STARTED - 06/03/2025 08:02:22 PM EST
+================================================================================
+Fetching live matches from TheSports API...
+✓ Live matches API call successful
+  Response time: 0.23 seconds
+  Total matches returned: 30
+  API response code: 0
+  Matches with status info: 30/30
+  Raw API status breakdown:
+    Not started (ID: 1): 5 matches
+    First half (ID: 2): 6 matches
+    Half-time (ID: 3): 6 matches
+    Second half (ID: 4): 3 matches
+    End (ID: 8): 6 matches
+    Delay (ID: 9): 2 matches
+    Cancel (ID: 12): 1 matches
+    To be determined (ID: 13): 1 matches
+Starting detailed data fetch for 30 matches...
+Detailed data fetch time: 36.71 seconds
+Unique teams fetched: 59
+Unique competitions fetched: 18
+Match details fetched: 30
+Match odds fetched: 30
+================================================================================
+STEP 1 - FETCH COMPLETED SUCCESSFULLY - 06/03/2025 08:02:22 PM EST
+Total execution time: 36.94 seconds
+In-Play matches: 15 (status IDs 2-7)
+================================================================================
+====================================================================================================
+Step 1: Fetched data with 23 matches
+Data saved to step1_2025-06-03_20-00-56.json
+Data saved to step1.json
+Data saved at 06/03/2025 08:00:57 PM (New York Time)
+
+================================================================================
+                    COMPREHENSIVE STATUS BREAKDOWN                    
+================================================================================
+First half (ID: 2): 5
+Half-time (ID: 3): 7
+Second half (ID: 4): 2
+End (ID: 8): 7
+Cancel (ID: 12): 1
+To be determined (ID: 13): 1
+IN-PLAY MATCHES: 14
+Total Matches Fetched: 23
+================================================================================
+
+====================================================================================================
+                    COMPREHENSIVE MATCH BREAKDOWN - ACTUAL MATCH DETAILS                    
+====================================================================================================
+
+CANCEL (ID: 12) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. USA Women vs China Women (0-0) - International Friendly
+
+END (ID: 8) - 7 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. 15 de Mayo Ypoa vs Torres Cue FC (1-3) - Paraguayan Cup
+  2. Tacuarembo vs CS Cerrito (2-0) - Uruguay Segunda League
+  3. Concordia U20 vs Chapecoense (Youth) (0-3) - Brazilian Youth Championship
+  4. Costa Rica (w) U20 vs USA (w) U20 (0-4) - CONCACAF U20 Women's Championship
+  5. Costa Rica (w) U20 vs Guyana (w) U20 (9-0) - CONCACAF U20 Women's Championship
+  ... and 2 more matches
+
+FIRST HALF (ID: 2) - 5 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Barranquilla FC vs Orsomarso (0-0) - Colombian Copa BetPlay DIMAYOR
+  2. SC Imbabura vs Chacaritas SC (0-0) - Ecuadorian Campeonato Serie B
+  3. Virginia Dream vs Grove Soccer United (0-0) - USL Jägermeister Cup
+  4. Canada Women vs Haiti Women (2-0) - International Friendly
+  5. Chattanooga Red Wolves (w) vs Birmingham Legion FC (W) (0-0) - USL WLW
+
+HALF-TIME (ID: 3) - 7 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Lansing City vs Union FC Macomb (1-2) - USL League Two
+  2. Vasco da Gama (Youth) vs Rio Branco AC (Youth) (1-0) - Brazilian Youth Championship
+  3. Cincinnati II vs Philadelphia Union II (0-2) - MLS Next PL
+  4. NONA FC vs Brevard SC (1-0) - USL League Two
+  5. Akron City FC vs Toledo Villa FC (1-0) - USL League Two
+  ... and 2 more matches
+
+SECOND HALF (ID: 4) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Rampla Juniors FC vs Oriental (0-0) - Uruguay Segunda League
+  2. Philadelphia Union DS vs West Chester Predators (6-1) - USL Jägermeister Cup
+
+TO BE DETERMINED (ID: 13) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Southern Soccer Academy (w) vs Asheville City SC (w) (0-0) - USL WLW
+
+====================================================================================================
+IN-PLAY MATCHES TOTAL: 14
+====================================================================================================
+Step 1: Fetched data with 24 matches
+Data saved to step1_2025-06-03_20-01-53.json
+Data saved to step1.json
+Data saved at 06/03/2025 08:01:54 PM (New York Time)
+
+================================================================================
+                    COMPREHENSIVE STATUS BREAKDOWN                    
+================================================================================
+First half (ID: 2): 6
+Half-time (ID: 3): 7
+Second half (ID: 4): 2
+End (ID: 8): 7
+Cancel (ID: 12): 1
+To be determined (ID: 13): 1
+IN-PLAY MATCHES: 15
+Total Matches Fetched: 24
+================================================================================
+
+====================================================================================================
+                    COMPREHENSIVE MATCH BREAKDOWN - ACTUAL MATCH DETAILS                    
+====================================================================================================
+
+CANCEL (ID: 12) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. USA Women vs China Women (0-0) - International Friendly
+
+END (ID: 8) - 7 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. 15 de Mayo Ypoa vs Torres Cue FC (1-3) - Paraguayan Cup
+  2. Tacuarembo vs CS Cerrito (2-0) - Uruguay Segunda League
+  3. Concordia U20 vs Chapecoense (Youth) (0-3) - Brazilian Youth Championship
+  4. Costa Rica (w) U20 vs USA (w) U20 (0-4) - CONCACAF U20 Women's Championship
+  5. Costa Rica (w) U20 vs Guyana (w) U20 (9-0) - CONCACAF U20 Women's Championship
+  ... and 2 more matches
+
+FIRST HALF (ID: 2) - 6 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Red River vs McKinney Chupacabras (0-0) - USL League Two
+  2. Barranquilla FC vs Orsomarso (0-0) - Colombian Copa BetPlay DIMAYOR
+  3. SC Imbabura vs Chacaritas SC (0-0) - Ecuadorian Campeonato Serie B
+  4. Virginia Dream vs Grove Soccer United (0-0) - USL Jägermeister Cup
+  5. Canada Women vs Haiti Women (2-0) - International Friendly
+  ... and 1 more matches
+
+HALF-TIME (ID: 3) - 7 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Lansing City vs Union FC Macomb (1-2) - USL League Two
+  2. Vasco da Gama (Youth) vs Rio Branco AC (Youth) (1-0) - Brazilian Youth Championship
+  3. Cincinnati II vs Philadelphia Union II (0-2) - MLS Next PL
+  4. NONA FC vs Brevard SC (1-0) - USL League Two
+  5. Akron City FC vs Toledo Villa FC (1-0) - USL League Two
+  ... and 2 more matches
+
+SECOND HALF (ID: 4) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Rampla Juniors FC vs Oriental (0-0) - Uruguay Segunda League
+  2. Philadelphia Union DS vs West Chester Predators (6-1) - USL Jägermeister Cup
+
+TO BE DETERMINED (ID: 13) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Southern Soccer Academy (w) vs Asheville City SC (w) (0-0) - USL WLW
+
+====================================================================================================
+IN-PLAY MATCHES TOTAL: 15
+====================================================================================================
+Step 1: Fetched data with 30 matches
+Data saved to step1_2025-06-03_20-02-59.json
+Data saved to step1.json
+Data saved at 06/03/2025 08:03:00 PM (New York Time)
+
+================================================================================
+                    COMPREHENSIVE STATUS BREAKDOWN                    
+================================================================================
+Not started (ID: 1): 1
+First half (ID: 2): 6
+Half-time (ID: 3): 6
+Second half (ID: 4): 3
+End (ID: 8): 6
+Delay (ID: 9): 5
+Cancel (ID: 12): 1
+To be determined (ID: 13): 2
+IN-PLAY MATCHES: 15
+Total Matches Fetched: 30
+================================================================================
+
+====================================================================================================
+                    COMPREHENSIVE MATCH BREAKDOWN - ACTUAL MATCH DETAILS                    
+====================================================================================================
+
+CANCEL (ID: 12) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. USA Women vs China Women (0-0) - International Friendly
+
+DELAY (ID: 9) - 5 MATCHES:
+----------------------------------------------------------------------------------------------------
+Cycle completed in 37.87s, sleeping for 22.13s
+================================================================================
+STEP 1 - DATA FETCH STARTED - 06/03/2025 08:03:22 PM EST
+================================================================================
+Fetching live matches from TheSports API...
+✓ Live matches API call successful
+  Response time: 0.30 seconds
+  Total matches returned: 25
+  API response code: 0
+  Matches with status info: 25/25
+  Raw API status breakdown:
+    First half (ID: 2): 6 matches
+    Half-time (ID: 3): 6 matches
+    Second half (ID: 4): 3 matches
+    End (ID: 8): 6 matches
+    Delay (ID: 9): 2 matches
+    Cancel (ID: 12): 1 matches
+    To be determined (ID: 13): 1 matches
+Starting detailed data fetch for 25 matches...
+Detailed data fetch time: 32.50 seconds
+Unique teams fetched: 49
+Unique competitions fetched: 14
+Match details fetched: 25
+Match odds fetched: 25
+================================================================================
+STEP 1 - FETCH COMPLETED SUCCESSFULLY - 06/03/2025 08:03:22 PM EST
+Total execution time: 32.81 seconds
+In-Play matches: 15 (status IDs 2-7)
+================================================================================
+Cycle completed in 33.57s, sleeping for 26.43s
+================================================================================
+STEP 1 - DATA FETCH STARTED - 06/03/2025 08:04:22 PM EST
+================================================================================
+Fetching live matches from TheSports API...
+✓ Live matches API call successful
+  Response time: 0.23 seconds
+  Total matches returned: 24
+  API response code: 0
+  Matches with status info: 24/24
+  Raw API status breakdown:
+    First half (ID: 2): 6 matches
+    Half-time (ID: 3): 6 matches
+    Second half (ID: 4): 3 matches
+    End (ID: 8): 5 matches
+    Delay (ID: 9): 2 matches
+    Cancel (ID: 12): 1 matches
+    To be determined (ID: 13): 1 matches
+Starting detailed data fetch for 24 matches...
+Detailed data fetch time: 28.33 seconds
+Unique teams fetched: 47
+Unique competitions fetched: 13
+Match details fetched: 24
+Match odds fetched: 24
+================================================================================
+STEP 1 - FETCH COMPLETED SUCCESSFULLY - 06/03/2025 08:04:22 PM EST
+Total execution time: 28.56 seconds
+In-Play matches: 15 (status IDs 2-7)
+================================================================================
+  1. GA Farroupilha vs Gramadense (0-0) - Brazilian Campeonato Gaucho 2
+  2. Grindavik vs Keflavik (0-0) - Iceland 1. Deild Karla
+  3. Unique Global FC vs Tallinding United (0-0) - Gambia League Second Division 
+  4. Panthere Sportive du Nde vs Dynamo de Douala (0-0) - Cameroon Elite One
+  5. Young Sports vs Canon Yaounde (0-0) - Cameroon Elite One
+
+END (ID: 8) - 6 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. 15 de Mayo Ypoa vs Torres Cue FC (1-3) - Paraguayan Cup
+  2. Tacuarembo vs CS Cerrito (2-0) - Uruguay Segunda League
+  3. Concordia U20 vs Chapecoense (Youth) (0-3) - Brazilian Youth Championship
+  4. Costa Rica (w) U20 vs USA (w) U20 (0-4) - CONCACAF U20 Women's Championship
+  5. Costa Rica (w) U20 vs Guyana (w) U20 (9-0) - CONCACAF U20 Women's Championship
+  ... and 1 more matches
+
+FIRST HALF (ID: 2) - 6 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Red River vs McKinney Chupacabras (0-0) - USL League Two
+  2. Barranquilla FC vs Orsomarso (0-0) - Colombian Copa BetPlay DIMAYOR
+  3. SC Imbabura vs Chacaritas SC (0-0) - Ecuadorian Campeonato Serie B
+  4. Virginia Dream vs Grove Soccer United (0-0) - USL Jägermeister Cup
+  5. Canada Women vs Haiti Women (2-0) - International Friendly
+  ... and 1 more matches
+
+HALF-TIME (ID: 3) - 6 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Lansing City vs Union FC Macomb (1-2) - USL League Two
+  2. Vasco da Gama (Youth) vs Rio Branco AC (Youth) (1-0) - Brazilian Youth Championship
+  3. Cincinnati II vs Philadelphia Union II (0-2) - MLS Next PL
+  4. NONA FC vs Brevard SC (1-0) - USL League Two
+  5. Akron City FC vs Toledo Villa FC (1-0) - USL League Two
+  ... and 1 more matches
+
+NOT STARTED (ID: 1) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Sacachispas vs UAI Urquiza (0-0) - Argentine Group B Tebolidun League Manchester
+
+SECOND HALF (ID: 4) - 3 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Boston Bolts vs West Mass Pioneers (0-2) - USL League Two
+  2. Rampla Juniors FC vs Oriental (0-0) - Uruguay Segunda League
+  3. Philadelphia Union DS vs West Chester Predators (6-1) - USL Jägermeister Cup
+
+TO BE DETERMINED (ID: 13) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Blacktown City Demons vs SD Raiders FC (0-0) - Australia FFA Cup
+  2. Southern Soccer Academy (w) vs Asheville City SC (w) (0-0) - USL WLW
+
+====================================================================================================
+IN-PLAY MATCHES TOTAL: 15
+====================================================================================================
+Step 1: Fetched data with 25 matches
+Data saved to step1_2025-06-03_20-03-55.json
+Data saved to step1.json
+Data saved at 06/03/2025 08:03:55 PM (New York Time)
+
+================================================================================
+                    COMPREHENSIVE STATUS BREAKDOWN                    
+================================================================================
+First half (ID: 2): 6
+Half-time (ID: 3): 6
+Second half (ID: 4): 3
+End (ID: 8): 6
+Delay (ID: 9): 2
+Cancel (ID: 12): 1
+To be determined (ID: 13): 1
+IN-PLAY MATCHES: 15
+Total Matches Fetched: 25
+================================================================================
+
+====================================================================================================
+                    COMPREHENSIVE MATCH BREAKDOWN - ACTUAL MATCH DETAILS                    
+====================================================================================================
+
+CANCEL (ID: 12) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. USA Women vs China Women (0-0) - International Friendly
+
+DELAY (ID: 9) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Grindavik vs Keflavik (0-0) - Iceland 1. Deild Karla
+  2. Unique Global FC vs Tallinding United (0-0) - Gambia League Second Division 
+
+END (ID: 8) - 6 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. 15 de Mayo Ypoa vs Torres Cue FC (1-3) - Paraguayan Cup
+  2. Tacuarembo vs CS Cerrito (2-0) - Uruguay Segunda League
+  3. Concordia U20 vs Chapecoense (Youth) (0-3) - Brazilian Youth Championship
+  4. Costa Rica (w) U20 vs USA (w) U20 (0-4) - CONCACAF U20 Women's Championship
+  5. Costa Rica (w) U20 vs Guyana (w) U20 (9-0) - CONCACAF U20 Women's Championship
+  ... and 1 more matches
+
+FIRST HALF (ID: 2) - 6 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Red River vs McKinney Chupacabras (0-1) - USL League Two
+  2. Barranquilla FC vs Orsomarso (0-0) - Colombian Copa BetPlay DIMAYOR
+  3. SC Imbabura vs Chacaritas SC (0-0) - Ecuadorian Campeonato Serie B
+  4. Virginia Dream vs Grove Soccer United (0-0) - USL Jägermeister Cup
+  5. Canada Women vs Haiti Women (2-0) - International Friendly
+  ... and 1 more matches
+
+HALF-TIME (ID: 3) - 6 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Lansing City vs Union FC Macomb (1-2) - USL League Two
+  2. Vasco da Gama (Youth) vs Rio Branco AC (Youth) (1-0) - Brazilian Youth Championship
+  3. Cincinnati II vs Philadelphia Union II (0-2) - MLS Next PL
+  4. NONA FC vs Brevard SC (1-0) - USL League Two
+  5. Akron City FC vs Toledo Villa FC (1-0) - USL League Two
+  ... and 1 more matches
+
+SECOND HALF (ID: 4) - 3 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Boston Bolts vs West Mass Pioneers (0-2) - USL League Two
+  2. Rampla Juniors FC vs Oriental (0-0) - Uruguay Segunda League
+  3. Philadelphia Union DS vs West Chester Predators (6-1) - USL Jägermeister Cup
+
+TO BE DETERMINED (ID: 13) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Southern Soccer Academy (w) vs Asheville City SC (w) (0-0) - USL WLW
+
+====================================================================================================
+IN-PLAY MATCHES TOTAL: 15
+====================================================================================================
+Step 1: Fetched data with 24 matches
+Data saved to step1_2025-06-03_20-04-50.json
+Data saved to step1.json
+Data saved at 06/03/2025 08:04:51 PM (New York Time)
+
+================================================================================
+                    COMPREHENSIVE STATUS BREAKDOWN                    
+================================================================================
+First half (ID: 2): 6
+Half-time (ID: 3): 6
+Second half (ID: 4): 3
+End (ID: 8): 5
+Delay (ID: 9): 2
+Cancel (ID: 12): 1
+To be determined (ID: 13): 1
+IN-PLAY MATCHES: 15
+Total Matches Fetched: 24
+================================================================================
+
+====================================================================================================
+                    COMPREHENSIVE MATCH BREAKDOWN - ACTUAL MATCH DETAILS                    
+====================================================================================================
+
+CANCEL (ID: 12) - 1 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. USA Women vs China Women (0-0) - International Friendly
+
+DELAY (ID: 9) - 2 MATCHES:
+----------------------------------------------------------------------------------------------------
+  1. Grindavik vs Keflavik (0-0) - Iceland 1. Deild Karla
+  2. Unique Global FC vs Tallinding United (0-0) - Gambia League Second Division 
+
+END (ID: 8) - 5 MATCHES:
+Cycle completed in 29.33s, sleeping for 30.67s
+================================================================================
+STEP 1 - DATA FETCH STARTED - 06/03/2025 08:05:22 PM EST
+================================================================================
+Fetching live matches from TheSports API...
+✓ Live matches API call successful
+  Response time: 0.29 seconds
+  Total matches returned: 21
+  API response code: 0
+  Matches with status info: 21/21
+  Raw API status breakdown:
+    First half (ID: 2): 6 matches
+    Half-time (ID: 3): 5 matches
+    Second half (ID: 4): 4 matches
+    End (ID: 8): 2 matches
+    Delay (ID: 9): 2 matches
+    Cancel (ID: 12): 1 matches
+    To be determined (ID: 13): 1 matches
+Starting detailed data fetch for 21 matches...
+Detailed data fetch time: 30.64 seconds
+Unique teams fetched: 42
+Unique competitions fetched: 12
+Match details fetched: 21
+Match odds fetched: 21
+================================================================================
+STEP 1 - FETCH COMPLETED SUCCESSFULLY - 06/03/2025 08:05:22 PM EST
+Total execution time: 30.93 seconds
+In-Play matches: 15 (status IDs 2-7)
+================================================================================
+Cycle completed in 31.51s, sleeping for 28.49s
+================================================================================
+STEP 1 - DATA FETCH STARTED - 06/03/2025 08:06:22 PM EST
+================================================================================
+Fetching live matches from TheSports API...
+✓ Live matches API call successful
+  Response time: 0.22 seconds
+  Total matches returned: 21
+  API response code: 0
+  Matches with status info: 21/21
+  Raw API status breakdown:
+    First half (ID: 2): 6 matches
+    Half-time (ID: 3): 5 matches
+    Second half (ID: 4): 4 matches
+    End (ID: 8): 2 matches
+    Delay (ID: 9): 2 matches
+    Cancel (ID: 12): 1 matches
+    To be determined (ID: 13): 1 matches
+Starting detailed data fetch for 21 matches...
